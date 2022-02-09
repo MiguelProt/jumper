@@ -10,8 +10,8 @@ class Hider:
         _word_to_find: the random word to find
     """
     def __init__(self):
-        #self.__words = ["hulk", "chronos", "ship", "animal"]
-        self.__words = ["animal"]
+        self.__words = ["hulk", "chronos", "ship", "animal"]
+        #self.__words = ["animal"]
         self.__word_to_find = list(random.choice(self.__words))
         self.__guessed_word = self.__init_guessed_word()
         self.__init_guessed_word()

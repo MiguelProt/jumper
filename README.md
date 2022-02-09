@@ -14,7 +14,8 @@ Jumper is played according to the following rules.
 ## Getting Started
 Make sure you have Python 3.8.0 or newer installed and running on your machine. Open a terminal and browse to the project's root folder. Start the program by running the following command.
 ```
-python3 jumper
+if you are inside the folder
+python ../jumper
 ```
 You can also run the program from an IDE like Visual Studio Code. Start your IDE and open the project folder. Select the main module inside the hunter folder and click the "run" icon.
 
@@ -23,7 +24,11 @@ The project files and folders are organized as follows:
 ```
 root                    (project root folder)
 +-- jumper              (source code for game)
-  +-- game              (specific classes)
+  +-- director          (specific classes)
+  +-- hider             (specific classes)
+  +-- jumper            (specific classes)
+  +-- parachut          (specific classes)
+  +-- terminal_service  (specific classes)
   +-- __main__.py       (program entry point)
 +-- README.md           (general info)
 ```

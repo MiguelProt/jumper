@@ -23,6 +23,7 @@ class Director:
             vueltas += 1
             print()
             self.__is_playing = self.__keep_play()
+        self.__show_status()
 
     def __show_status(self):
         status = self.__hider.get_status()
@@ -51,6 +52,5 @@ class Director:
             keep_playing = False
         elif opportunities <= 0: 
             print("You Fail!")
-            self.__parachute.print_complete_parachute()
             keep_playing = False
         return keep_playing
