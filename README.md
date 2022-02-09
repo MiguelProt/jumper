@@ -37,6 +37,6 @@ root                    (project root folder)
 * Python 3.8.0
 
 ## Authors
-* Miguel Prot
 * Canyon Atwood
+* Miguel Prot
 * Nathan Wall
