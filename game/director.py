@@ -73,10 +73,11 @@ class Director:
             guessed_letter: this is the letter that the user guessed
         """
         letter_found = self.__hider.update_guessed_word(guessed_letter)
-        self.__terminal_service.write_text(f"\nThe letter '{guessed_letter}' is not in the word")
         if not letter_found and guessed_letter != '':
-
+            self.__terminal_service.write_text(f"\nThe letter '{guessed_letter}' is not in the word")
             self.__parachute.remove_an_opportunity(0)
+        elif letter_found and guessed_letter != '':
+            self.__terminal_service.write_text(f"\nThe letter '{guessed_letter}' is in the word")
 
     def __keep_play(self):
         """
