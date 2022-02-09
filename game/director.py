@@ -39,7 +39,9 @@ class Director:
 
     def __do_updates(self, guessed_letter):
         letter_found = self.__hider.update_guessed_word(guessed_letter)
+        self.__terminal_service.write_text(f"\nThe letter '{guessed_letter}' is not in the word")
         if not letter_found and guessed_letter != '':
+
             self.__parachute.remove_an_opportunity(0)
 
     def __keep_play(self):
@@ -48,9 +50,9 @@ class Director:
         word_found = self.__hider.word_found()
 
         if word_found == True:
-            print("Winner!")
+            self.__terminal_service.write_text("Winner!")
             keep_playing = False
         elif opportunities <= 0: 
-            print("You Fail!")
+            self.__terminal_service.write_text("You Fail!")
             keep_playing = False
         return keep_playing
