@@ -3,11 +3,12 @@ import random
 class Hider:
     """The person hiding from the Seeker. 
     
-    The responsibility of Hider is to keep track of its location and distance from the seeker. 
+    The responsibility of Hider is to say if the guess of the user is right or not
     
     Attributes:
         _words (list): The list of available words
         _word_to_find: the random word to find
+        _guessed_word: The word that the user will be discovering
     """
     def __init__(self):
         self.__words = ["hulk", "chronos", "ship", "animal"]
