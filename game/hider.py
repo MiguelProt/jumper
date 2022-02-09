@@ -18,6 +18,9 @@ class Hider:
         self.__init_guessed_word()
 
     def __init_guessed_word(self):
+        """
+        This method will assign the right number of '_' based on the self.__word_to_find
+        """
         index = 0
         temp_guessed_word = []
         for letter in self.__word_to_find:
@@ -29,6 +32,7 @@ class Hider:
         return self.__guessed_word
 
     def update_guessed_word(self, player_letter):
+        
         index = 0
         letter_found = False
         for letter in self.__word_to_find:
@@ -43,13 +47,3 @@ class Hider:
             if letter == "_":
                 return False
         return True
-
-
-"""
-h = Hider()
-print(h.show_status()["opportunities"])
-print(h.update_status())
-print()
-for line in h.get_opportunities():
-    print(line)
-"""
