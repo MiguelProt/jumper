@@ -38,7 +38,6 @@ class Director:
             self.__show_status()
             guessed_letter = self._get_inputs()
             self.__do_updates(guessed_letter)
-            vueltas += 1
             print()
             self.__is_playing = self.__keep_play()
         self.__show_status()
