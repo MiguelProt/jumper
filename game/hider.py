@@ -1,7 +1,7 @@
 import random
 
 class Hider:
-    """The person hiding from the Seeker. 
+    """The person hiding from the person who is trying to discover the word. 
     
     The responsibility of Hider is to say if the guess of the user is right or not
     
@@ -47,6 +47,10 @@ class Hider:
         return letter_found
 
     def word_found(self):
+        """
+        We read all the guessed word and if there's an '_' inside the word, then there is 
+        a word that we need to discover
+        """
         for letter in self.__guessed_word:
             if letter == "_":
                 return False
