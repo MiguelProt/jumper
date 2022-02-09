@@ -32,7 +32,11 @@ class Hider:
         return self.__guessed_word
 
     def update_guessed_word(self, player_letter):
-        
+        """
+        This method is created to determinate if the letter that the user guess is 
+        inside the word that we need to find. If the letter is inside the word, then we update 
+        the self.__guessed_word adding the letter in the right index and returning a bool value.
+        """
         index = 0
         letter_found = False
         for letter in self.__word_to_find:
